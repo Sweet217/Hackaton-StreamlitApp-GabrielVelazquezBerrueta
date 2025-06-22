@@ -10,8 +10,8 @@ import base64
 
 # Set page config
 st.set_page_config(
-    page_title="MNIST Digit Generator",
-    page_icon="🔢",
+    page_title="MNIST Digit Generator - Gabriel Velazquez Berrueta",
+    page_icon="🔢GVB",
     layout="wide"
 )
 
@@ -235,7 +235,7 @@ def main():
                         with cols[i]:
                             # Convert to PIL Image for display
                             img_pil = Image.fromarray((img * 255).astype(np.uint8))
-                            st.image(img_pil, caption=f"Sample {i+1}", use_column_width=True)
+                            st.image(img_pil, caption=f"Sample {i+1}", use_container_width=True)
                 
                 else:
                     st.error("Failed to generate images. Please try again.")
